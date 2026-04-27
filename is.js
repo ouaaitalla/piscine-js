@@ -39,7 +39,7 @@
         return (Array.isArray(x)) 
     }
     is.obj= function (x) {
-        if (typeof x === 'object' && !is.arr(x) && !is.undef(x)) {
+        if (typeof x === 'object' && !is.arr(x) && !is.undef(x)&&  x !== null) {
             return true
         }
         return false
