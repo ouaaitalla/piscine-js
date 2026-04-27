@@ -7,3 +7,5 @@ const persone= {
 const clone1 = {...persone}
 const clone2 = {...persone}
 const samepersone = persone
+persone.age=persone.age+1
+persone.country='FR'
