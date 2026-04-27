@@ -40,7 +40,7 @@ function strToObj(str) {
 
 function superTypeOf(value) {
     if (value === null) {
-        return 'Null'
+        return 'null'
     }
     if (Array.isArray(value)) {
         return 'Array'
