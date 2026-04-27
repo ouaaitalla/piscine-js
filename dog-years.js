@@ -12,6 +12,6 @@ const obj = {
     neptune : 164.79132
 }
 var dogYears= (age / (second * obj.name))*dog;
-dogAge = Math.round(dogYears * 100) / 100;
+const dogAge = Math.round(dogYears * 100) / 100;
 return Agedog;
 }
