@@ -53,11 +53,7 @@ function superTypeOf(value) {
         return 'Set'
     }
     if (typeof value === "object") return "Object"
+    if (typeof value === "string") return "String"
     let type = typeof value
-
-    return capitalize(type)
-}
-
-function capitalize (str) {
-    return str[0].toUpperCase() + str.slice(1).toLowerCase()
+    return type 
 }
