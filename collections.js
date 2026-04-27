@@ -26,7 +26,13 @@ function objToMap(obj) {
     return new Map(Object.entries(obj))
 }
 function arrToObj(arr) {
-    return Object.fromEntries(arr)
+    let obj = {}
+
+    for (let i = 0; i < arr.length; i++) {
+        obj[i] = arr[i]
+    }
+
+    return obj
 }
 function strToObj(str) {
     return Object.fromEntries(str.split('').map((char, index) => [index, char]))
