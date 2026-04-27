@@ -11,6 +11,8 @@ obj = {
     uranus : 84.016846,
     neptune : 164.79132
 }
-var dogAge= (age / (second * obj.name))*dog;
-return dogAge;
+var dogYears= (age / (second * obj.name))*dog;
+dogAge = dogYears.toFixed(2);
+Agedog = Number(dogAge);
+return Agedog;
 }
