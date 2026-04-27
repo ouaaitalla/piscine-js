@@ -54,6 +54,7 @@ function superTypeOf(value) {
     }
     if (typeof value === "object") return "Object"
     if (typeof value === "string") return "String"
+    if (typeof value === "number") return "Number"
     let type = typeof value
     return type 
 }
