@@ -1,7 +1,7 @@
 
-const clone1 = { ...persone};
-const clone2 = { ...persone};
-const samepersone = persone;
+const clone1 = { ...person};
+const clone2 = { ...person};
+const samepersone = person;
 
-persone.age++;
-persone.country='FR';
+person.age++;
+person.country='FR';
