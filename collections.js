@@ -46,10 +46,10 @@ function superTypeOf(value) {
         return 'array'
     }
     if (value instanceof Map) {
-        return 'map'
+        return 'Map'
     }
     if (value instanceof Set) {
-        return 'set'
+        return 'Set'
     }
 }
 
