@@ -45,11 +45,14 @@ function superTypeOf(value) {
     if (Array.isArray(value)) {
         return 'array'
     }
+    
     if (value instanceof Map) {
         return 'Map'
     }
     if (value instanceof Set) {
         return 'Set'
     }
+    if (typeof value === "object") return "object"
+    return typeof value
 }
 
