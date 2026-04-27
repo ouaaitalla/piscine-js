@@ -7,6 +7,6 @@ function last(x){
 }
 
 function kiss(x){
-    var arr = [x.last, x.first]
+    var arr = [last(x), first(x)]
     return arr
 }
