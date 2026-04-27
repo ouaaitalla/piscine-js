@@ -1,7 +1,7 @@
 function dogYears(name, age) {
     var second = 31557600;
     var dog = 7;
-obj = {
+const obj = {
     earth : 1,
     mercury : 0.2408467,
     venus : 0.61519726,
