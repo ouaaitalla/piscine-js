@@ -53,6 +53,11 @@ function superTypeOf(value) {
         return 'Set'
     }
     if (typeof value === "object") return "Object"
-    return typeof value
+    type = typeof value
+
+    return capitalize(type)
 }
 
+function capitalize (str) {
+    return str[0].toUpperCase() + str.slice(1).toLowerCase()
+}
