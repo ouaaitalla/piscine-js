@@ -52,7 +52,7 @@ function superTypeOf(value) {
     if (value instanceof Set) {
         return 'Set'
     }
-    if (typeof value === "object") return "object"
+    if (typeof value === "object") return "Object"
     return typeof value
 }
 
