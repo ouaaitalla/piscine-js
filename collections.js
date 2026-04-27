@@ -40,10 +40,10 @@ function strToObj(str) {
 
 function superTypeOf(value) {
     if (value === null) {
-        return 'null'
+        return 'Null'
     }
     if (Array.isArray(value)) {
-        return 'array'
+        return 'Array'
     }
     
     if (value instanceof Map) {
