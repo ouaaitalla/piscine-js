@@ -13,5 +13,5 @@ const obj = {
 }
 var dogYears= (age / (second * obj.name))*dog;
 const dogAge = Math.round(dogYears * 100) / 100;
-return Agedog;
+return dogAge;
 }
