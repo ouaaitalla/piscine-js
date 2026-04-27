@@ -53,7 +53,7 @@ function superTypeOf(value) {
         return 'Set'
     }
     if (typeof value === "object") return "Object"
-    type = typeof value
+    let type = typeof value
 
     return capitalize(type)
 }
