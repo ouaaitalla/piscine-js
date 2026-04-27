@@ -1,5 +1,5 @@
 function get(key){
-    return key.sourceObject
+    return sourceObject[key]
 }
 
 function set(key, value){
