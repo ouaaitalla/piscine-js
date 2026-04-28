@@ -2,13 +2,14 @@ function blockChain(data , prev){
     if (prev == null){
         prev = { index: 0, hash: '0' }
     }
+    const index = prev.index + 1
     const block = {
-        index: prev.index + 1,
+        index: index,
         data: data,
-        Hash: hachCode(index + prev.hash + JSON.stringify(data)),
+        hash: hachCode(index + prev.hash + JSON.stringify(data)),
         prev: prev,
-        chain:function(data , block){
-            return blockChain('data', block)
+        chain:function(newData){
+            return blockChain(newData, block)
         }
 
     }
