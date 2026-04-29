@@ -1,4 +1,4 @@
-function slice (str, start, end= str.length-1) {
+function slice (str, start, end= str.length) {
     let sign = false
 
     if (start < 0) {
@@ -17,3 +17,6 @@ function slice (str, start, end= str.length-1) {
     }
     return result
 }
+
+
+console.log(slice('abcdef', 2)) // 'hello'
