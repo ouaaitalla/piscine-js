@@ -23,5 +23,3 @@ function nasa (N) {
     return str;
 }
 
-
-console.log(nasa(15))
