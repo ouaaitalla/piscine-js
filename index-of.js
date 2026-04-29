@@ -7,7 +7,7 @@ function indexOf(arr, search, index = -1) {
     return -1;
 }
 function lastIndexOf(arr, search,index = arr.length) {
-    for (let i = index - 1; i >= 0; i--) {
+    for (let i = index; i >= 0; i--) {
         if (arr[i] === search) {
             return i;
         }
