@@ -10,14 +10,14 @@ function nasa (N) {
             continue;
         }
         if (i % 3 === 0) {
-            str += 'Na';
+            str += 'NA';
             if (i < N) { 
             str += ' ';
             }
             continue;
         }
         if (i % 5 === 0) {
-            str += 'Sa';
+            str += 'SA';
             if (i < N) {
                 str += ' ';
             }
