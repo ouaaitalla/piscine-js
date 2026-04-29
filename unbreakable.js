@@ -3,7 +3,8 @@ function split (str, sep) {
     let word = ''
     let x = sep.length
     for (let i = 0; i < str.length; i++) {
-        if (str.slice(i  ,i + x) === sep) {
+
+        if (i + x <= str.length &&(str.slice(i  ,i + x) === sep)) {
             res.push(word)
             word = ''
             i += x - 1
