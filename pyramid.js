@@ -9,4 +9,3 @@ function pyramid (str , num) {
     return result;
 }
 
-console.log(pyramid('{}', 12));
