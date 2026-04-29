@@ -9,4 +9,4 @@ function pyramid (str , num) {
     return result;
 }
 
-console.log(pyramid('x', 5));
+console.log(pyramid('{}', 12));
