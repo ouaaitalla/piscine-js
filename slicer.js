@@ -1,4 +1,4 @@
-function slice (str, start, end) {
+function slice (str, start, end= str.length-1) {
     let sign = false
 
     if (start < 0) {
