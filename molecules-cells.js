@@ -1,5 +1,5 @@
 function RNA (str){
-    strand = {
+    let strand = {
         C: 'G',
         G: 'C',
         T: 'A',
@@ -13,7 +13,7 @@ function RNA (str){
 }
 
 function DNA (str){
-    strand = {
+    let strand = {
         G: 'C',
         C: 'G',
         U: 'A',
