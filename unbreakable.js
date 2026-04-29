@@ -2,6 +2,12 @@ function split (str, sep) {
     let res = []
     let word = ''
     let x = sep.length
+    if (x === 0) {
+        for (let i = 0; i < str.length; i++) {
+            res.push(str[i])
+        }
+        return res
+    }
     for (let i = 0; i < str.length; i++) {
 
         if (i + x <= str.length &&(str.slice(i  ,i + x) === sep)) {
@@ -27,5 +33,3 @@ function join (arr, sep) {
     return result
 }
 
-console.log(split('ggg - ddd - b',' - '))
-console.log(join(['hello', 'world'], ' '))
