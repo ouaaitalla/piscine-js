@@ -59,7 +59,7 @@ function keepFirstLast (str) {
     if (str.length === 0) {
         return ''
     }
-    if (str.length === 2) {
+    if (str.length <= 4) {
         return str
     }
     let result = ''
@@ -74,3 +74,4 @@ function keepFirstLast (str) {
     return result
 }
 
+console.log(keepFirstLast('afd'))
