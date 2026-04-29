@@ -4,17 +4,23 @@ function nasa (N) {
         
         if (i % 5 === 0 && i % 3 === 0) {
             str += 'NASA';
+            if (i < N) {
             str += ' ';
+            }
             continue;
         }
         if (i % 3 === 0) {
             str += 'Na';
+            if (i < N) { 
             str += ' ';
+            }
             continue;
         }
         if (i % 5 === 0) {
             str += 'Sa';
-            str += ' ';
+            if (i < N) {
+                str += ' ';
+            }
             continue;
         }
         str+= String(i);
