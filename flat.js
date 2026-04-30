@@ -1,8 +1,8 @@
-function flat(arr) {
+function flat(arr , depth = 1) {
     let res = []
     for (let i = 0; i < arr.length; i++) {
-        if (Array.isArray(arr[i])) {
-            res.push(...flat(arr[i]))
+        if (Array.isArray(arr[i]) && depth > 0) {
+            res.push(...flat(arr[i], depth - 1))
         } else {
             res.push(arr[i])
         }
@@ -10,5 +10,3 @@ function flat(arr) {
     return res;
 }
 
-
-console.log(flat([1, 2, [3, 4, [5, 6]], 7])) // [1, 2, 3, 4, 5, 6, 7]
