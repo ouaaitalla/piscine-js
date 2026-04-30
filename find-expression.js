@@ -20,9 +20,3 @@ function findExpression (number) {
 }
 
 
-console.log(findExpression(31));    
-console.log(findExpression(14));
-console.log(findExpression(10));
-console.log(findExpression(-1));
-console.log(findExpression(2));
-console.log(findExpression(5));
