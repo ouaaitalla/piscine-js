@@ -1,9 +1,9 @@
-const add4 = '+4'
-const mul2 = '*2'
+// const add4 = '+4'
+// const mul2 = '*2'
 
 function findExpression (number) {
     if (number <= 0) {return undefined;}
-    // if (number%2 != 0) {return undefined;}
+    if (number%2 != 0) {return undefined;}
     let result = "1";
     let current = 1;
     if (number === 1) {return result;}
