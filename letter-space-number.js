@@ -4,4 +4,3 @@ function letterSpaceNumber(str){
     return arr === null ? [] : arr
 }
 
-console.log(letterSpaceNumber('He is 8 or 9 years old, not 10.'))
