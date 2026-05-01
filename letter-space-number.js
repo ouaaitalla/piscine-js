@@ -1,4 +1,4 @@
 function letterSpaceNumber(str){
-    const he = new RegExp("[a-z A-Z] [0-9](?= )")
-    return he.exec(str)
+    const he = new RegExp("[a-zA-Z] [0-9](?=[^0-9A-Za-z])", "g")
+    return str.match(he)
 }
