@@ -1,4 +1,4 @@
-const vowels = new RegExp("[aeiuo]" , "g");
+const vowels = new RegExp("[AOUIEaeiuo]" , "g");
 
 function vowelDots(str){
 
