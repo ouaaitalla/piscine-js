@@ -38,10 +38,11 @@ export function tempForecasts(arr){
     let temp = arr.map(function(obj){return obj.temperature })
     let cel = fahrenheitToCelsius(temp)
     let state = arr.map(obj=>obj.state)
+    let stat = upperCasingStates(state)
     let bim = citiesOnly(arr)
    
     return arr.map((obj, i) => {
-   return cel[i] + "elsius in " + bim[i] + ", " + state[i]
+   return cel[i] + "elsius in " + bim[i] + ", " + stat[i]
 })
    
 }
