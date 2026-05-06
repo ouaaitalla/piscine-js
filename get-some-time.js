@@ -6,7 +6,6 @@ export function firstDayWeek (num , str){
         return "Invalid week number"
     }
     let year = Number(str)
-    let dateb = new Date(0)
     let date = new Date(0)
     date.setFullYear(year, 0, 1 )
     let hook = new Date(date.getTime() + ((num -1) * millisecond))
@@ -27,6 +26,7 @@ export function firstDayWeek (num , str){
     let daten = hook.setDate(hook.getDate() - counter)
 
     let batch = new Date(daten)
+    console.log(batch)
     if (batch.getFullYear() !== year) {
         batch = new Date(year, 0, 1)
         let res = batch.toISOString().split("T")[0]
