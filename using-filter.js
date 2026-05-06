@@ -5,12 +5,12 @@ export function filterShortStateName(arr){
 const vowels = new RegExp("[AOUIEaeiuo]" , "g");
 export function filterStartVowel(arr){
     return arr.filter(function(word){
-        return  word.match(vowels)
+        return  word[0].match(vowels)
     })
 }
 
 export function filter1DistinctVowel(arr){
-    function vowels (str){
+    function vowel (str){
         str = str.toLowerCase()
         let set = new Set
         for (let l of str){
@@ -23,11 +23,11 @@ export function filter1DistinctVowel(arr){
         }
         return true
     }
-    return arr.filter(vowels)
+    return arr.filter(vowel)
 }
 
 export function multiFilter(arr){   
-    return arr.capital.filter(function(word){return word.length>=8 }).arr.name.filter(function(word){return !filterStartVowel(word[0])}).arr.tag.filter(function(word){return word.filterStartVowel()}).arr.region.filter(function(word){return word!== "South"}) ;
+    return arr.capital.filter(function(word){return word.length>=8 }).arr.name.filter(function(word){return !filterStartVowel(word)}).arr.tag.filter(function(word){return word.match(vowels)}).arr.region.filter(function(word){return word!== "South"}) ;
 }
 console.log(filterStartVowel(["Alabama", "hhhh", "bat"]))
 console.log(filter1DistinctVowel(["Alabama", "hhhh", "batilo"]))
