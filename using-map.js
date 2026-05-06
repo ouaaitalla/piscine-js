@@ -41,7 +41,7 @@ export function tempForecasts(arr){
     let bim = citiesOnly(arr)
    
     return arr.map((obj, i) => {
-   return cel[i] + "°Celsius in " + bim[i] + ", " + state[i]
+   return cel[i] + "elsius in " + bim[i] + ", " + state[i]
 })
    
 }
