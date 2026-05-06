@@ -9,6 +9,18 @@ export function filterStartVowel(arr){
     })
 }
 
+export function filter5Vowels(arr){
+    return res = arr.map(function(word){
+        char = word.split("")
+        
+        return char.filter(function(c){
+            let count = c.match(vowels)
+            return count.length >= 5
+        })
+    })
+
+}
+
 export function filter1DistinctVowel(arr){
     function vowel (str){
         str = str.toLowerCase()
