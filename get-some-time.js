@@ -30,8 +30,8 @@ export function firstDayWeek (num , str){
     if (batch.getFullYear() !== year) {
        return new Date(year, 0, 1)
     }
-    let result =batch.split("T")[0]
-
+    let res = batch.toISOString().split("T")[0]
+    let result = res.split("-").reverse().join("-")
     return result
     
 }
