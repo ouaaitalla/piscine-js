@@ -2,8 +2,10 @@ export function matchCron (str, date) {
     let bool = false
     let newDate = new Date(date)
     let crons = str.split(" ")
+    let count = 0
     for (let i = 0 ; i < crons.length; i++){
         if (crons[i] === "*"){
+            count ++
             continue
         }
         if (i === 0) {
@@ -41,7 +43,10 @@ export function matchCron (str, date) {
         }
 
     }
+    if (count === 5){
+        return true
+    }
     return bool
 }
 
-console.log(matchCron('* * * 2 *', new Date('2021-02-01 00:00:00')))
+console.log(matchCron('* * * * *', new Date('2021-02-01 00:00:00')))
