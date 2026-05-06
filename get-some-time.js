@@ -1,11 +1,39 @@
-export function firstDayWeek (num , str){
-    let year = Number(str)
-    let date3tini = new Date(year, 0, 1)
-    let firstDay = date3tini.getDay()
-    let day = (num - firstDay + 7) % 7
-    date3tini.setDate(date3tini.getDate() + day)
-    return date3tini
-}
- 
 
-console.log(firstDayWeek(1, "2024"))
+const millisecond = 7 * 24 * 60 * 60 * 1000
+
+export function firstDayWeek (num , str){
+    if (num < 1 || num > 53) {
+        return "Invalid week number"
+    }
+    let year = Number(str)
+    let dateb = new Date(0)
+    let date = new Date(0)
+    date.setFullYear(year, 0, 1 )
+    let hook = new Date(date.getTime() + ((num -1) * millisecond))
+    let day = hook.getDay()
+    let counter = 0
+    while (day !== 1 && counter < 6) {
+        if (day === 0) {
+            day -=6
+            counter += 6
+            break
+
+        }
+        day -= 1
+        counter += 1
+   
+    }
+
+    let daten = hook.setDate(hook.getDate() - counter)
+
+    let batch = new Date(daten)
+    if (batch.getFullYear() !== year) {
+       return new Date(year, 0, 1)
+    }
+    let result =batch.split("T")[0]
+
+    return result
+    
+}
+    console.log(firstDayWeek(2, "0001"))
+    

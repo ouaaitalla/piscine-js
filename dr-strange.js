@@ -22,7 +22,7 @@ export function addWeek(input){
     const day = (diffTime/1000/60/60/24)%14
     return days[Math.abs(day)]
 }
-// console.log(addWeek("2024-06-01"))
+
 export function timeTravel(objDate){
     if (objDate.hour <0 || objDate.hour > 23 || objDate.minute < 0 || objDate.minute > 59 || objDate.second < 0 || objDate.second > 59){
         return "Time is not valid"
