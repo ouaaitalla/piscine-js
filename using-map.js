@@ -2,15 +2,22 @@
 export function citiesOnly(arr){
     return arr.map(obj=>obj.city)
 }
+const ToUpp=(str)=>{
+         return  str[0].toUpperCase() + str.slice(1).toLowerCase()
+}
 
 export function upperCasingStates(arr) {
-    return arr.map(function(str){
-        let sting = str.split(" ")
-        return sting.map(function(str){
-            let word = str[0].toUpperCase() + str.slice(1).toLowerCase()
-            return word
-        }).join(" ")
-    })
+
+return arr.map((w)=>{
+    return w.split(" ").map((str)=>ToUpp(str)).join(" ")
+})
+    // return arr.map(function(str){
+    //     let sting = str.split(" ")
+    //     return sting.map(function(str){
+    //         let word = str[0].toUpperCase() + str.slice(1).toLowerCase()
+    //         return word
+    //     }).join(" ")
+    // })
 
 }
 
@@ -45,6 +52,22 @@ export function tempForecasts(arr){
    return cel[i] + "elsius in " + bim[i] + ", " + stat[i]
 })
    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 console.log(tempForecasts([
