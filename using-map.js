@@ -39,6 +39,7 @@ export function tempForecasts(arr){
     let state = arr.map(obj=>obj.state)
     return arr.map(function(ar){
      ar = String(cel)+"elsius in "+ citiesOnly(arr)+", "+state
+     return ar
     })
    
 }
