@@ -38,7 +38,7 @@ export function tempForecasts(arr){
     let cel = fahrenheitToCelsius(temp)
     let state = arr.map(obj=>obj.state)
     return arr.map(function(ar){
-        let ar = String(cel)+"elsius in "+ citiesOnly(arr)+", "+state
+     ar = String(cel)+"elsius in "+ citiesOnly(arr)+", "+state
     })
    
 }
