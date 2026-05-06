@@ -2,23 +2,17 @@ export function filterShortStateName(arr){
     return arr.filter(function(word){return word.length< 7})
 }
 
-const vowels = new RegExp("[AOUIEaeiuo]" , "g");
+const vowels = new RegExp("[AOUIEaeiuo]" , "gi");
 export function filterStartVowel(arr){
     return arr.filter(function(word){
         return  word[0].match(vowels)
     })
 }
-
-export function filter5Vowels(arr){
-    return res = arr.map(function(word){
-        let char = word.split("")
-        
-        return char.filter(function(c){
-            let count = c.match(vowels)
-            return count.length >= 5
-        })
-    })
-
+export function filter5Vowels(arr) {
+  return arr.filter(str => {
+    let matches = str.match(vowels)
+    return matches && matches.length >= 5
+  })
 }
 
 export function filter1DistinctVowel(arr){
