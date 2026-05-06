@@ -32,8 +32,12 @@ export function filter1DistinctVowel(arr){
     return arr.filter(vowel)
 }
 
-export function multiFilter(arr){   
-    return arr.capital.filter(function(word){return word.length>=8 }).arr.name.filter(function(word){return !filterStartVowel(word)}).arr.tag.filter(function(word){return word.match(vowels)}).arr.region.filter(function(word){return word!== "South"}) ;
+export function multiFilter(arr) {
+  return arr.filter(obj => {
+    const cond1 = obj.capital.length >= 8
+    const cond2 = !/^[aeiou]/i.test(obj.name)
+    const cond3 = /[aeiou]/i.test(obj.tag)
+    const cond4 = obj.region !== "South"
+    return cond1 && cond2 && cond3 && cond4
+  })
 }
-console.log(filterStartVowel(["Alabama", "hhhh", "bat"]))
-console.log(filter1DistinctVowel(["Alabama", "hhhh", "batilo"]))
