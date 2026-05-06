@@ -17,7 +17,7 @@ export function upperCasingStates(arr) {
 export function fahrenheitToCelsius(arr){
     let celarr = arr.map(function(str){
         let daraja = str.slice(0,-2)
-        return Math.round((daraja -32)*(9/5))
+        return Math.round((daraja -32)/(9/5))
     })
     let cel = celarr.map(function(cell){
          return String(cell)+"°C"
