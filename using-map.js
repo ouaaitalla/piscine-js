@@ -34,13 +34,29 @@ export function trimTemp(arr){
 
 export function tempForecasts(arr){
     arr = trimTemp(arr)
+    
     let temp = arr.map(function(obj){return obj.temperature })
     let cel = fahrenheitToCelsius(temp)
     let state = arr.map(obj=>obj.state)
-    return arr.map(function(ar){
-     ar = String(cel)+"elsius in "+ citiesOnly(arr)+", "+state
-     return ar
-    })
+    let bim = citiesOnly(arr)
+   
+    return arr.map((obj, i) => {
+   return cel[i] + "°Celsius in " + bim[i] + ", " + state[i]
+})
    
 }
 
+console.log(tempForecasts([
+  {
+    city: 'Pasadena',
+    temperature: ' 101 °F',
+    state: 'california',
+    region: 'West',
+  },
+    {
+    city: 'oujda',
+    temperature: ' 89 °F',
+    state: 'maroc',
+    region: 'West',
+  },
+]))
