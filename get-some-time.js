@@ -28,12 +28,15 @@ export function firstDayWeek (num , str){
 
     let batch = new Date(daten)
     if (batch.getFullYear() !== year) {
-       return new Date(year, 0, 1)
+        batch = new Date(year, 0, 1)
+        let res = batch.toISOString().split("T")[0]
+        let result = res.split("-").reverse().join("-")
+       return result
     }
     let res = batch.toISOString().split("T")[0]
     let result = res.split("-").reverse().join("-")
     return result
     
 }
-    console.log(firstDayWeek(2, "0001"))
+    console.log(firstDayWeek(1, "1000"))
     
