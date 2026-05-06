@@ -1,5 +1,11 @@
 export function isValid(date) {
-    return date instanceof Date && !isNaN(date.getTime())
+    if (typeof date === "string") {return false
+    }
+    let data=new Date(date)
+    if (data.toString() === "Invalid Date") {
+        return false
+    }
+    return true
 }
 
 export function isAfter(date1, date2) {
@@ -17,4 +23,4 @@ export function isFuture(date) {
 export function isPast(date) {
     return isValid(date) && date < new Date();
 }
-
+console.log(new Date('invalid').toString())
