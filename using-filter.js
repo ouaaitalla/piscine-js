@@ -11,7 +11,7 @@ export function filterStartVowel(arr){
 
 export function filter5Vowels(arr){
     return res = arr.map(function(word){
-        char = word.split("")
+        let char = word.split("")
         
         return char.filter(function(c){
             let count = c.match(vowels)
