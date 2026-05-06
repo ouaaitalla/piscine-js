@@ -7,7 +7,7 @@ export function addWeek(input){
         'Friday',
         'Saturday',
         'Sunday',
-        'secodMonday',
+        'secondMonday',
         'secondTuesday',
         'secondWednesday',
         'secondThursday',
