@@ -1,4 +1,4 @@
-export function countLeapYears(date){
+function countLeapYears(date){
     const year = new Date(date).getFullYear()
     let res = Math.floor(year / 4)
          - Math.floor(year / 100)

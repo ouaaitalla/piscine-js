@@ -1,4 +1,4 @@
-export function isValid(date) {
+function isValid(date) {
     if (typeof date === "string") {return false
     }
     let data=new Date(date)
@@ -8,19 +8,19 @@ export function isValid(date) {
     return true
 }
 
-export function isAfter(date1, date2) {
+function isAfter(date1, date2) {
     return date1 > date2
 }
 
-export function isBefore(date1, date2) {
+function isBefore(date1, date2) {
     return date2 > date1
 }
 
-export function isFuture(date) {
+function isFuture(date) {
     return isValid(date) && date > new Date()
 }
 
-export function isPast(date) {
+function isPast(date) {
     return isValid(date) && date < new Date();
 }
 console.log(new Date('invalid').toString())

@@ -1,4 +1,4 @@
-export function matchCron (str, date) {
+function matchCron (str, date) {
     let bool = false
     let newDate = new Date(date)
     let crons = str.split(" ")

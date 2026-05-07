@@ -1,4 +1,4 @@
-export function dayOfTheYear(date){
+function dayOfTheYear(date){
     
     const d = new Date(date)
 

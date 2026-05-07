@@ -1,4 +1,4 @@
-export function addWeek(input){
+function addWeek(input){
     const days = [
         'Monday',
         'Tuesday',
@@ -23,7 +23,7 @@ export function addWeek(input){
     return days[Math.abs(day)]
 }
 
-export function timeTravel(objDate){
+function timeTravel(objDate){
     if (objDate.hour <0 || objDate.hour > 23 || objDate.minute < 0 || objDate.minute > 59 || objDate.second < 0 || objDate.second > 59){
         return "Time is not valid"
     }

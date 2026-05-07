@@ -1,12 +1,12 @@
 
-export function citiesOnly(arr){
+function citiesOnly(arr){
     return arr.map(obj=>obj.city)
 }
 const ToUpp=(str)=>{
          return  str[0].toUpperCase() + str.slice(1).toLowerCase()
 }
 
-export function upperCasingStates(arr) {
+function upperCasingStates(arr) {
 
 return arr.map((w)=>{
     return w.split(" ").map((str)=>ToUpp(str)).join(" ")
@@ -21,7 +21,7 @@ return arr.map((w)=>{
 
 }
 
-export function fahrenheitToCelsius(arr){
+function fahrenheitToCelsius(arr){
     let celarr = arr.map(function(str){
         let daraja = str.slice(0,-2)
         return Math.floor((daraja -32)/(9/5))
@@ -32,14 +32,14 @@ export function fahrenheitToCelsius(arr){
     return cel
 }
 
-export function trimTemp(arr){
+function trimTemp(arr){
     return arr.map(function(obj){
         obj.temperature =  obj.temperature.replace(/\s/g,"")
         return obj
     })
 }
 
-export function tempForecasts(arr){
+function tempForecasts(arr){
     arr = trimTemp(arr)
     
     let temp = arr.map(function(obj){return obj.temperature })

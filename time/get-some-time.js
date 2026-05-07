@@ -1,7 +1,7 @@
 
 const millisecond = 7 * 24 * 60 * 60 * 1000
 
-export function firstDayWeek (num , str){
+function firstDayWeek (num , str){
     if (num < 1 || num > 53) {
         return "Invalid week number"
     }

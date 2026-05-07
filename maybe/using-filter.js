@@ -1,21 +1,21 @@
-export function filterShortStateName(arr){
+function filterShortStateName(arr){
     return arr.filter(function(word){return word.length< 7})
 }
 
 const vowels = new RegExp("[AOUIEaeiuo]" , "gi");
-export function filterStartVowel(arr){
+function filterStartVowel(arr){
     return arr.filter(function(word){
         return  word[0].match(vowels)
     })
 }
-export function filter5Vowels(arr) {
+function filter5Vowels(arr) {
   return arr.filter(str => {
     let matches = str.match(vowels)
     return matches && matches.length >= 5
   })
 }
 
-export function filter1DistinctVowel(arr){
+function filter1DistinctVowel(arr){
     function vowel (str){
         str = str.toLowerCase()
         let set = new Set
@@ -32,7 +32,7 @@ export function filter1DistinctVowel(arr){
     return arr.filter(vowel)
 }
 
-export function multiFilter(arr) {
+function multiFilter(arr) {
   return arr.filter(obj => {
     const cond1 = obj.capital.length >= 8
     const cond2 = !/^[aeiou]/i.test(obj.name)

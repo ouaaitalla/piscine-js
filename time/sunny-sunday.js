@@ -1,3 +1,3 @@
-export function sunnySunday(date){
+function sunnySunday(date){
     
 }
