@@ -16,8 +16,10 @@ function sub4(a){
     return function(b){
         return function(c){
             return function(d){
-                returna-b-c-d
+                return a-b-c-d
             }
         }
     }
 }
+
+console.log(sub4(4)(7)(10)(30))
