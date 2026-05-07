@@ -11,7 +11,9 @@ function oneLongWord(arr){
 }
 
 function noLongWords(arr){
-    return arr.some(function(elem){
-        return !(typeof ele === 'string' && ele.length >= 7)
+    return !arr.some(function(elem){
+        return (typeof elem === 'string' && elem.length >= 7)
     })
 }
+
+
