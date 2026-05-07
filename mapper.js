@@ -23,3 +23,5 @@ function flatMap(arr , func){
     return flat(pre) 
 }
 
+
+console.log(flatMap([1, 2, 3], n => [n, n]))
