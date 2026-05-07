@@ -29,9 +29,7 @@ export function repair(...ids){
             brick.dataset.repaired = 'true'
         } 
     }
-    // ids.forEach(function(id){
-    
-    // })
+
 }
 
 export function destroy(){
