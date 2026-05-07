@@ -22,4 +22,3 @@ function sub4(a){
     }
 }
 
-console.log(sub4(4)(7)(10)(30))
