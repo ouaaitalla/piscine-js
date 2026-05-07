@@ -13,23 +13,21 @@ export function build(num){
         document.body.append(brick)
         count++
 
-    },1)
+    },100)
 }
 
 export function repair(...ids){
-    for(let id of ids){
-           const brick = document.getElementById(id)
-        console.log(brick,id)
+    ids.forEach(id => {
+        const brick = document.getElementById(id)
+
         if (!brick) return
 
-        if (brick.dataset.foundation === 'true'){
-       console.log("yes",id)
+        if (brick.dataset.foundation === 'true') {
             brick.dataset.repaired = 'in progress'
-        }else{
+        } else {
             brick.dataset.repaired = 'true'
-        } 
-    }
-
+        }
+    })
 }
 
 export function destroy(){
