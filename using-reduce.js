@@ -1,7 +1,7 @@
-export function adder(arr){
+export function adder(arr, init){
     return arr.reduce(function(acc, num){
         return acc + num
-    }, 0)
+    }, init)
 }
 
 export function sumOrMul(arr, init=0){
