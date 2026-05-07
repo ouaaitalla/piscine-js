@@ -5,7 +5,8 @@ function hasCity(country, arr){
             if ( cit === city){
                 return city +" is a city from "+country
             }
-                return city+ " is not a city from "+country
+                
         }
+        return city+ " is not a city from "+country
     }
 }
