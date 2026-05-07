@@ -17,8 +17,7 @@ export function sumOrMul(arr, init=0){
 
 function funcExec(arr, init=0){
     return arr.reduce(function(acc , func) {
+        func(acc)
     },init)
 }
 
-
-console.log(adder([1, 2, 3, 4]), 10)
