@@ -36,7 +36,3 @@ function reduceRight(arr, func){
 
     return acc
 }
-
-
-const adder = (a, b) => a + b
-console.log(reduceRight([1, 2, 3], adder))
