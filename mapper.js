@@ -19,7 +19,7 @@ function flat(arr , depth = 1) {
 }
 
 function flatMap(arr , func){
-    let pre = arr.map(func)
+    let pre = map(arr, func)
     return flat(pre) 
 }
 
