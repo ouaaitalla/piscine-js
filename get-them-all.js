@@ -34,7 +34,7 @@ export function getArchitects(){
 //     return [classical, nonClassical]
 // }
 
-function getClassical() {
+export function getClassical() {
   return [Array.from(document.querySelectorAll("a.classical")), Array.from(document.querySelectorAll("a")).filter(item => !item.classList.contains("classical"))] 
 }
 
