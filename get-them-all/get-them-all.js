@@ -1,4 +1,3 @@
-import { people } from "./get-them-all.data.js"
 
 export function getArchitects(){
     const all = document.querySelectorAll('a, span')
@@ -37,7 +36,6 @@ export function getArchitects(){
 export function getClassical() {
   return [Array.from(document.querySelectorAll("a.classical")), Array.from(document.querySelectorAll("a")).filter(item => !item.classList.contains("classical"))] 
 }
-
 
 export function getActive(){
     const [classical] = getClassical()
