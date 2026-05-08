@@ -17,21 +17,25 @@ export function getArchitects(){
     return [architects, nonArchitects]
 }
 
-export function getClassical(){
-    const [architects] = getArchitects()
+// export function getClassical(){
+//     const [architects] = getArchitects()
 
-    const classical = []
-    const nonClassical = []
+//     const classical = []
+//     const nonClassical = []
 
-    architects.forEach(function(el){
-    if (el.classList.contains('classical')) {
-      classical.push(el)
-    } else {
-      nonClassical.push(el)
-    }
-  })
+//     architects.forEach(function(el){
+//     if (el.classList.contains('classical')) {
+//       classical.push(el)
+//     } else {
+//       nonClassical.push(el)
+//     }
+//   })
 
-    return [classical, nonClassical]
+//     return [classical, nonClassical]
+// }
+
+function getClassical() {
+  return [Array.from(document.querySelectorAll("a.classical")), Array.from(document.querySelectorAll("a")).filter(item => !item.classList.contains("classical"))] 
 }
 
 
