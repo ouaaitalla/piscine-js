@@ -25,7 +25,6 @@ export function generateColdShades() {
             document.body.append(div)
         }
     
-    console.log(9999)
     })
     
 }
