@@ -123,43 +123,20 @@ function floor(num) {
 }
 
 function trunc(num) {
-    let res = 0
-    let sign = false
-    if (num < 0) {
-        num = -num
-        sign = true
-    }
-    
-    let x = num
-    if (x >= 100000000000000000){
-        while (x >= 100000000000000000) {
-         x -= 100000000000000000
-         res += 100000000000000000
-        }
-    }
-    if (x >= 10000000){
-        while (x >= 10000000) {
-         x -= 10000000
-         res += 10000000
-        }
-    }
-    if (x >= 1000){
-        while (x >= 1000) {
-         x -= 1000
-         res += 1000
-        }
-    }
-    while (x >= 1) {
-         x -= 1
-         res += 1
-    }
-    if (sign) {
-        return -res
-    }
-    return res
+  if (num < 0) {
+    return -trunc(-num)
+  }
+  if (num < 1) {
+    return 0
+  }
+  let power = 1
+
+  while (power * 2 <= num) {
+    power *= 2
+  }
+
+  return power + trunc(num - power)
 }
 
-console.log(round(1000000000000000000.6))
-console.log(ceil(1.5))
-console.log(floor(1.5))
+
 console.log(trunc(1.5))
