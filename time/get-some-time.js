@@ -16,15 +16,11 @@ function firstDayWeek (num , str){
             day -=6
             counter += 6
             break
-
         }
         day -= 1
         counter += 1
-   
     }
-
     let daten = hook.setDate(hook.getDate() - counter)
-
     let batch = new Date(daten)
     console.log(batch)
     if (batch.getFullYear() !== year) {
@@ -38,5 +34,5 @@ function firstDayWeek (num , str){
     return result
     
 }
-    console.log(firstDayWeek(1, "1000"))
+console.log(firstDayWeek(1, "1000"))
     
