@@ -3,7 +3,7 @@ function isFriday (date) {
         return true
     }
     return false
-} 
+}
 function isWeekend (date) {
     if (date.getDay() === 0 || date.getDay() === 6) {
         return true
