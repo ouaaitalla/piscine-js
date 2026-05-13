@@ -1,8 +1,7 @@
 function neuron(data) {
-  const result = {
-    questions: {},
-    orders: {},
-  }
+  if (data.length === 0) return {}
+
+  const result = {}
 
   for (const item of data) {
     const [left, responsePart] = item.split(' - Response: ')
@@ -16,6 +15,10 @@ function neuron(data) {
       .toLowerCase()
       .replace(/[!?]/g, '')
       .replace(/\s+/g, '_')
+
+    if (!result[type]) {
+      result[type] = {}
+    }
 
     if (!result[type][key]) {
       result[type][key] = {
