@@ -22,12 +22,21 @@ function mapKeys(obj, callback) {
 }
 
 function reduceKeys(obj, callback, initialValue) {
-  let acc = initialValue !== undefined ? initialValue : ""
-
   const keys = Object.keys(obj)
 
-  for (const key of keys) {
-    acc = callback(acc, key)
+  let acc
+  let start
+
+  if (initialValue !== undefined) {
+    acc = initialValue
+    start = 0
+  } else {
+    acc = keys[0]
+    start = 1
+  }
+
+  for (let i = start; i < keys.length; i++) {
+    acc = callback(acc, keys[i])
   }
 
   return acc
